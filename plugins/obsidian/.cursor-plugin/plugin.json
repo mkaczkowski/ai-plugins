@@ -1,0 +1,17 @@
+{
+  "name": "obsidian",
+  "description": "Obsidian vault integration: CLI, flavored markdown, bases, canvas, defuddle, daily workflow, and epic knowledge base scaffolding",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mariusz Kaczkowski"
+  },
+  "keywords": [
+    "obsidian",
+    "notes",
+    "daily",
+    "vault",
+    "markdown",
+    "canvas"
+  ],
+  "skills": "skills"
+}

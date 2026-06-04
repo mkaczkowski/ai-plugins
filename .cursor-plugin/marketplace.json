@@ -1,0 +1,23 @@
+{
+  "name": "ai-plugins",
+  "owner": {
+    "name": "Community"
+  },
+  "plugins": [
+    {
+      "name": "queen",
+      "source": "./plugins/queen",
+      "description": "Spec-driven feature orchestrator with parallel discovery, human-in-the-loop architecture design, and quality gates"
+    },
+    {
+      "name": "cursor-consult",
+      "source": "./plugins/cursor-consult",
+      "description": "Read-only analysis using Cursor CLI — review changes, ask questions, or get a second opinion from a different AI agent"
+    },
+    {
+      "name": "obsidian",
+      "source": "./plugins/obsidian",
+      "description": "Obsidian vault integration: CLI, flavored markdown, bases, canvas, defuddle, daily workflow, and epic knowledge base scaffolding"
+    }
+  ]
+}

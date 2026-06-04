@@ -1,0 +1,35 @@
+{
+  "name": "ai-plugins",
+  "owner": {
+    "name": "Community"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for AI-assisted development"
+  },
+  "plugins": [
+    {
+      "name": "queen",
+      "source": "./plugins/queen",
+      "description": "Spec-driven feature orchestrator with parallel discovery, human-in-the-loop architecture design, and quality gates",
+      "version": "1.0.0",
+      "category": "feature-dev",
+      "tags": ["feature-dev", "orchestrator", "code-review", "architecture", "quality-gate"]
+    },
+    {
+      "name": "cursor-consult",
+      "source": "./plugins/cursor-consult",
+      "description": "Read-only analysis using Cursor CLI — review changes, ask questions, or get a second opinion from a different AI agent",
+      "version": "1.0.0",
+      "category": "analysis",
+      "tags": ["cursor", "review", "analysis", "second-opinion", "code-review"]
+    },
+    {
+      "name": "obsidian",
+      "source": "./plugins/obsidian",
+      "description": "Obsidian vault integration: CLI, flavored markdown, bases, canvas, defuddle, daily workflow, and epic knowledge base scaffolding",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["obsidian", "notes", "daily", "vault", "markdown", "canvas"]
+    }
+  ]
+}
