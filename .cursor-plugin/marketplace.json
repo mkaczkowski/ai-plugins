@@ -17,7 +17,7 @@
     {
       "name": "obsidian",
       "source": "./plugins/obsidian",
-      "description": "Obsidian vault integration: CLI, flavored markdown, bases, canvas, defuddle, daily workflow, and epic knowledge base scaffolding"
+      "description": "Obsidian vault integration: CLI, flavored markdown, bases, canvas, defuddle, daily workflow, and project knowledge base scaffolding"
     }
   ]
 }

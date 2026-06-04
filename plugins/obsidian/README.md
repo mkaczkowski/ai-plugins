@@ -1,6 +1,6 @@
 # obsidian
 
-Drive a running Obsidian vault from Claude Code. Six bundled skills cover daily routines, CLI automation, flavored markdown authoring, Bases, Canvas, and web content extraction.
+Drive a running Obsidian vault from Claude Code. Seven bundled skills cover daily routines, project scaffolding, CLI automation, flavored markdown authoring, Bases, Canvas, and web content extraction.
 
 ## When to use it
 
@@ -19,6 +19,7 @@ Drive a running Obsidian vault from Claude Code. Six bundled skills cover daily 
 | End of day | `/obsidian-daily eod` — lists done/open tasks, seeds "Tomorrow" section, prints vault health |
 | Weekly cleanup | `/obsidian-daily weekly` — open tasks, orphans, broken links, stats + suggestions |
 | Quick lookup | `/obsidian-daily find module federation` |
+| Kick off a project | `/obsidian-project-scaffold new "Auth Refactor" PROJ-999` — creates a project folder with an index, a brief, resources, and a meetings folder |
 | Author a note | "Create a project note with a warning callout and a wikilink to Architecture Notes" |
 | Build a database view | "Make a Base showing all active projects sorted by due date" |
 | Sketch a diagram | "Create a canvas with three grouped nodes connected left to right" |
@@ -30,13 +31,14 @@ Drive a running Obsidian vault from Claude Code. Six bundled skills cover daily 
 | Skill | Purpose |
 | --- | --- |
 | `obsidian-daily` | Opinionated daily routines (custom) |
+| `obsidian-project-scaffold` | Scaffold a new project knowledge base with templated files (custom) |
 | `obsidian-cli` | Drive the `obsidian` CLI against a running vault |
 | `obsidian-markdown` | Obsidian Flavored Markdown: wikilinks, callouts, embeds, properties |
 | `obsidian-bases` | Author `.base` files (views, filters, formulas) |
 | `json-canvas` | Author `.canvas` files (nodes, edges, groups) |
 | `defuddle` | Extract clean markdown from web pages via the Defuddle CLI |
 
-`obsidian-daily` is invoked with `/obsidian-daily <routine>`. The rest are model-invoked: describe what you want and the right skill loads automatically.
+`obsidian-daily` and `obsidian-project-scaffold` are invoked with slash commands (`/obsidian-daily <routine>`, `/obsidian-project-scaffold new "<title>"`). The rest are model-invoked: describe what you want and the right skill loads automatically.
 
 ## Requirements
 
@@ -49,12 +51,13 @@ Drive a running Obsidian vault from Claude Code. Six bundled skills cover daily 
 
 ## Configuration
 
-`obsidian-daily` reads two environment variables:
+The custom skills read these environment variables:
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
 | `OBSIDIAN_VAULT` | yes | Target vault name passed to every `obsidian` CLI call |
-| `OBSIDIAN_1ON1_PATH` | no (default `Meetings/1 On 1s`) | Folder where 1:1 notes live |
+| `OBSIDIAN_1ON1_PATH` | no (default `Meetings/1 On 1s`) | Folder where 1:1 notes live (`obsidian-daily`) |
+| `OBSIDIAN_PROJECTS_PATH` | no (default `Work/Projects`) | Parent folder for scaffolded projects (`obsidian-project-scaffold`) |
 
 Set them in your shell rc:
 
